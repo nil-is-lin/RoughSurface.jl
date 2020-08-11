@@ -7,13 +7,21 @@ julia:
   - nightly
 os:
   - linux
-  - osx
-  - windows
 arch:
   - x64
 cache:
   directories:
     - ~/.julia/artifacts
+addons:
+  apt:
+    packages:
+      - python3
+      - python3-pip
+      - python3-setuptools
+before_install:
+  - pip3 install --user --upgrade pip
+  - pip --version
+  - pip install pyvista
 jobs:
   fast_finish: true
   allow_failures:
@@ -26,9 +34,9 @@ jobs:
           using Pkg
           Pkg.develop(PackageSpec(path=pwd()))
           Pkg.instantiate()
-          using Documenter: doctest
-          using RoughSurface
-          doctest(RoughSurface)
+          # using Documenter: doctest
+          # using RoughSurface
+          # doctest(RoughSurface)
           include("docs/make.jl")'
       after_success: skip
 after_success:

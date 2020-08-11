@@ -1,5 +1,6 @@
 using RoughSurface
 using Documenter
+DocMeta.setdocmeta!(RoughSurface, :DocTestSetup, :(using RoughSurface); recursive=true)
 
 makedocs(;
     modules=[RoughSurface],
@@ -13,6 +14,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Test" => "test.md"
     ],
 )
 
