@@ -1,4 +1,10 @@
 using PyCall
+using Conda
+
+if PyCall.conda
+    Conda.add_channel("conda-forge")
+    Conda.add("pyvista")
+end # if
 
 function __init__()
     py"""
