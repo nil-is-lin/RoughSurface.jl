@@ -6,9 +6,9 @@ julia:
   - 1.5
   - nightly
 os:
-  - windows
   - linux
   - osx
+  - windows
 arch:
   - x64
 cache:
@@ -21,9 +21,10 @@ jobs:
   include:
     - stage: Documentation
       julia: 1.5
-      script:|
-        julia --project=docs/ -e 'using Pkg; ENV["PYTHON"]=""; Pkg.add("PyCall")'
+      script: |
+        julia --project=docs -e '
           using Pkg
+          ENV["PYTHON"]=""; Pkg.add("PyCall")
           Pkg.develop(PackageSpec(path=pwd()))
           Pkg.instantiate()
           using Documenter: doctest
