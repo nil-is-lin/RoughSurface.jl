@@ -21,7 +21,7 @@ jobs:
   include:
     - stage: Documentation
       julia: 1.5
-      script:
+      script:|
         - julia --project=docs/ -e 'using Pkg; ENV["PYTHON"]=""; Pkg.add("PyCall")'
         - julia --project=docs -e '
           using Pkg
