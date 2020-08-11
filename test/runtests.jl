@@ -12,5 +12,5 @@ using Test
         rm(file_path[i])
     end # for
     # 文档
-    doctest(RoughSurface)
+    # doctest(RoughSurface)
 end

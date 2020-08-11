@@ -34,9 +34,9 @@ jobs:
           using Pkg
           Pkg.develop(PackageSpec(path=pwd()))
           Pkg.instantiate()
-          # using Documenter: doctest
-          # using RoughSurface
-          # doctest(RoughSurface)
+          using Documenter: doctest
+          using RoughSurface
+          doctest(RoughSurface)
           include("docs/make.jl")'
       after_success: skip
 after_success:
