@@ -6,6 +6,7 @@ julia:
   - 1.5
   - nightly
 os:
+  - windows
   - linux
   - osx
 arch:
@@ -13,14 +14,6 @@ arch:
 cache:
   directories:
     - ~/.julia/artifacts
-addons:
-  apt:
-    packages:
-      - python3-numpy
-before_install:
-  - pip3 install --user --upgrade pip
-  - pip3 --version
-  - pip3 install --user pyvista
 jobs:
   fast_finish: true
   allow_failures:
@@ -28,8 +21,9 @@ jobs:
   include:
     - stage: Documentation
       julia: 1.5
-      script: |
-        julia --project=docs -e '
+      script:
+        - julia --project=docs/ -e 'using Pkg; ENV["PYTHON"]=""; Pkg.add("PyCall")'
+        - julia --project=docs -e '
           using Pkg
           Pkg.develop(PackageSpec(path=pwd()))
           Pkg.instantiate()
