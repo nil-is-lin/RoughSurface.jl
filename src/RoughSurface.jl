@@ -3,12 +3,14 @@ module RoughSurface
 # Write your package code here.
 using DelimitedFiles, JLD2, FileIO
 
+export write_surf, read_surf, show_surf
 
 ```@meta
 CurrentModule = RoughSurface
 ```
 
-export write_surf, read_surf
+include(joinpath(@__DIR__, "RoughSurface_GUI.jl"))
+include(joinpath(@__DIR__, "RoughSurface_Controller.jl"))
 
 """
     write_surf()
@@ -56,5 +58,12 @@ function read_surf(file_path)
     end
     return surf
 end # function
+
+"""
+    show_surf()
+
+利用python的pyvista包显示规则表面数据.
+"""
+show_surf(surf_mat) = py"show_surf"(surf_mat)
 
 end  # module
