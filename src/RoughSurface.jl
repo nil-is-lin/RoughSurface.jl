@@ -2,6 +2,7 @@ module RoughSurface
 
 # Write your package code here.
 using DelimitedFiles, JLD2, FileIO
+using PyCall
 
 export write_surf, read_surf, show_surf
 

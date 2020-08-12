@@ -11,7 +11,7 @@ Modules = [RoughSurface]
 ```
 ## Example
 
-```jldoctest
+```julia
 using RoughSurface
 
 surf_mat = Base.rand(Float64, (480, 640));
