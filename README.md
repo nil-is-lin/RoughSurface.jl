@@ -46,6 +46,9 @@
 	- [FEALPy](https://github.com/weihuayi/fealpy) - Finite Element Analysis Library in Python.
 	- [JuliaFEM.jl](https://github.com/JuliaFEM/JuliaFEM.jl) - an open source solver for both industrial and academia usage.
 	- [Abapy](https://github.com/lcharleux/abapy) - tools to build, postprocess and plot automatic finite element simulations using Abaqus.
+	- [MFEM](https://github.com/mfem/mfem) - Finite Element Discretization Library
 - 优化算法相关
 	- [PyCG_DESCENT](https://github.com/martiniani-lab/PyCG_DESCENT) - Python Conjugate Gradient Descent.
 	- [Optim.jl](https://github.com/JuliaNLSolvers/Optim.jl) - Univariate and multivariate optimization in Julia.
+- Dock窗体
+	- [Qt-Advanced-Docking-System](https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System) - Qt Advanced Docking System lets you create customizable layouts using a full featured window docking system similar to what is found in many popular integrated development environments (IDEs) such as Visual Studio.
