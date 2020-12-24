@@ -13,9 +13,9 @@ PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 [compat]
 Documenter = "0.25"
 FileIO = "1.4"
-JLD2 = "0.1"
-julia = "1.5"
+JLD2 = "0.1, 0.2"
 PyCall = "1.91"
+julia = "1.5"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
